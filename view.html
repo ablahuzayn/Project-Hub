@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Projects - Project Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f2f44;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    #project-list {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .project-card {
+      background-color: #f8fafc;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #1f2f44;
+    }
+
+    .project-card p {
+      margin: 0.5rem 0;
+      color: #334155;
+    }
+
+    .project-card a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>📂 Submitted Projects - Project Hub</header>
+
+  <main id="project-list">
+    <!-- Project cards will be inserted here by JavaScript -->
+  </main>
+
+  <!-- Firebase + Script to fetch from Firestore -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      getDocs
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBoWxvm8Mz5K6H5hBr37Bs4HYjPQEmi2qk",
+      authDomain: "peojecthub.firebaseapp.com",
+      projectId: "peojecthub",
+      storageBucket: "peojecthub.appspot.com",
+      messagingSenderId: "252517616777",
+      appId: "1:252517616777:web:be6354cc9629d289110a58",
+      measurementId: "G-J1N2PQ66NN"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const projectList = document.getElementById("project-list");
+
+    async function fetchProjects() {
+      const querySnapshot = await getDocs(collection(db, "project submission"));
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const timestamp = data.timestamp?.seconds
+          ? new Date(data.timestamp.seconds * 1000).toLocaleString()
+          : "N/A";
+
+        const card = document.createElement("div");
+        card.className = "project-card";
+        card.innerHTML = `
+          <h3>${data.title || "Untitled Project"}</h3>
+          <p><strong>Description:</strong> ${data.description || "N/A"}</p>
+          <p><strong>Tech Stack:</strong> ${data.techStack || "N/A"}</p>
+          <p><strong>Link:</strong> <a href="${data.GithubLink}" target="_blank">${data.GithubLink || "N/A"}</a></p>
+          <p><strong>Submitted:</strong> ${timestamp}</p>
+        `;
+        projectList.appendChild(card);
+      });
+    }
+
+    fetchProjects();
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Details</title>
+  <link rel="stylesheet" href="upload.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <span>Share the Project details</span>
+    <i class="fas fa-user"></i>
+  </header>
+
+  <section>
+    <div>
+      <h2>Welcome back!</h2>
+      <p>
+        We’re excited to see what you’ve been building.<br/>
+        Your ideas can shape tomorrow so don’t keep them waiting.<br/>
+        Share your project details below.<br/>
+        Let’s build, collaborate, and transform your innovation into real impact!
+      </p>
+    </div>
+    <img src="./image/girl.png" alt="Waving woman" />
+  </section>
+
+  <!-- ✅ Added ID to form for JS -->
+  <form id="upload-form">
+    <div class="form-box form-box-row">
+      <div class="input-group">
+        <label for="project-title">Project Title</label>
+        <input type="text" id="project-title" placeholder="Enter your project name" required />
+      </div>
+    </div>
+
+    <div class="form-box">
+      <label for="project-description">Project Description</label>
+      <input type="text" id="project-description" placeholder="Describe your project briefly" required />
+    </div>
+
+    <div class="form-box form-box-row">
+      <div class="input-group">
+        <label for="tech-stack">Tech Stack Used</label>
+        <input type="text" id="tech-stack" placeholder="Enter the stack used" required />
+      </div>
+    </div>
+
+    <div class="form-box">
+      <label for="github-link">GitHub / Live Demo Link</label>
+      <input type="url" id="github-link" placeholder="Enter your project link" required />
+    </div>
+
+    <button type="submit">Submit Project</button>
+  </form>
+
+  <!-- View Submitted Projects Button -->
+<div style="text-align: center; margin-top: 20px;">
+  <a href="view.html">
+    <button type="button" style="padding: 10px 20px; background-color: #1f2f44; color: white; border: none; border-radius: 6px; cursor: pointer;">
+      🔍 View Submitted Projects
+    </button>
+  </a>
+</div>
+
+
+  <!-- ✅ Success Message Script -->
+  <script>
+    document.getElementById("upload-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Optional: Validation or Firebase code can go here
+
+      // ✅ Show alert message
+      alert("✅ Project successfully uploaded!");
+
+      // ✅ Reset form fields
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+

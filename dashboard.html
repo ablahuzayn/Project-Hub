@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-header">
+    <button id="logout-btn" class="logout-button">Log out</button>
+  </header>
+
+  <main class="dashboard-main">
+    <h1 class="dashboard-title">
+      <span class="text-gray">Project</span>
+      <span class="text-dark">Hub</span>
+    </h1>
+
+    <p class="dashboard-subtitle">
+      Upload your winning hackathon or ideathon projects.
+      <br />
+      Get recognized. Get mentored. Get launched.
+    </p>
+
+    <img src="./image/Adobe Express - file (8).png"
+         alt="Illustration of a woman at desk"
+         class="dashboard-image" />
+
+    <section class="info-box">
+      <h2 class="section-title">What is Project Hub?</h2>
+      <p class="info-text">
+        A platform where students can upload their hackathon-winning or ideathon-submitted projects.
+        Every month, the top 3 projects will be featured and get a chance to receive mentorship,
+        resources, or guidance.
+      </p>
+      <h3 class="section-title">How it works?</h3>
+      <p class="info-text">
+        <strong>Upload:</strong> Share your hackathon or ideathon project.<br />
+        <strong>Get Featured:</strong> Every month, top 3 projects are highlighted.<br />
+        <strong>Get Support:</strong> Selected projects receive mentorship and help.
+      </p>
+    </section>
+
+    <button id="upload-btn" class="upload-button">
+  <i class="fas fa-plus-circle"></i>
+  <span>Upload Project</span>
+</button>
+
+  </main>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBoWxvm8Mz5K6H5hBr37Bs4HYjPQEmi2qk",
+      authDomain: "peojecthub.firebaseapp.com",
+      projectId: "peojecthub",
+      storageBucket: "peojecthub.appspot.com",
+      messagingSenderId: "252517616777",
+      appId: "1:252517616777:web:be6354cc9629d289110a58",
+      measurementId: "G-J1N2PQ66NN"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "login.html";
+      }
+    });
+
+      document.getElementById("logout-btn").addEventListener("click", () => {
+      signOut(auth).then(() => {
+        window.location.href = "login.html";
+      });
+    });
+
+    // 👉 Redirect to upload.html on button click
+    document.getElementById("upload-btn").addEventListener("click", () => {
+      window.location.href = "upload.html";
+    });
+ 
+  </script>
+</body>
+</html>

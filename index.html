@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Hub Signup</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="body">
+  <h1 class="title">Project <span class="highlight">Hub</span></h1>
+  <div class="spacer"></div>
+
+  <!-- ✅ Signup Form -->
+  <form id="signup-form" class="form" autocomplete="off">
+    <h2 class="form-title">Get Started</h2>
+    <input id="fullName" name="fullName" type="text" placeholder="Enter Full Name" class="input" autocomplete="name" required />
+    <input id="email" name="email" type="email" placeholder="Enter Email" class="input" autocomplete="email" required />
+    <input id="password" name="password" type="password" placeholder="Enter Password" class="input" autocomplete="new-password" required />
+
+    <label for="terms" class="checkbox-container">
+      <input id="terms" type="checkbox" checked class="checkbox" />
+      Agree with <a href="#" class="link">Terms & Conditions</a>
+    </label>
+
+    <button type="submit" class="button">Sign Up</button>
+
+    <p class="login-text">
+      Already have an account? <a href="/login.html" class="link">Log in</a>
+    </p>
+
+    <div class="divider">
+      <hr />
+      <span>Sign up with</span>
+      <hr />
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="https://storage.googleapis.com/a1aa/image/25c0381e-7440-4639-d07b-95e337c9b2c6.jpg" alt="Instagram" />
+      </a>
+      <a href="https://accounts.google.com/AccountChooser" target="_blank">
+        <img src="https://storage.googleapis.com/a1aa/image/b199f9af-8d85-4a2d-4f4b-d87b4ae382d7.jpg" alt="Google" />
+      </a>
+    </div>
+  </form>
+
+  <!-- ✅ Load Firebase & Script -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
