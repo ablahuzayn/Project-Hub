@@ -1,20 +1,22 @@
+
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
+  background-color: #54788a;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  background-color: #54788a;
-  margin: 0;
+  padding-top: 3rem;
 }
 
 .title {
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 2.25rem;
   font-weight: 800;
   color: #d1d5db;
   user-select: none;
+  text-align: center;
 }
 
 .highlight {
@@ -34,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem auto;
 }
 
 .form-title {
@@ -43,6 +45,7 @@ body {
   color: #2f4054;
   margin-bottom: 2rem;
   user-select: none;
+  text-align: center;
 }
 
 .input {
@@ -100,6 +103,7 @@ body {
   color: #4b5563;
   margin-bottom: 1.5rem;
   user-select: none;
+  text-align: center;
 }
 
 .link {
@@ -145,7 +149,8 @@ body {
 .social-icons img:hover {
   transform: scale(1.2);
 }
-/* Base Layout */
+
+/* Dashboard Layout */
 .dashboard-body {
   background-color: #5B7A8A;
   min-height: 100vh;
@@ -154,7 +159,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
 }
 
-/* Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -181,7 +185,6 @@ body {
   cursor: pointer;
 }
 
-/* Main */
 .dashboard-main {
   flex-grow: 1;
   display: flex;
@@ -190,7 +193,6 @@ body {
   padding: 1.5rem;
 }
 
-/* Texts */
 .dashboard-title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -215,7 +217,6 @@ body {
   line-height: 1.5;
 }
 
-/* Image */
 .dashboard-image {
   max-width: 100%;
   height: auto;
@@ -223,7 +224,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Info Box */
 .info-box {
   background-color: #D1D5DB;
   border-radius: 1rem;
@@ -245,7 +245,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Upload Button */
 .upload-button {
   background-color: #1B2430;
   color: white;
@@ -257,4 +256,48 @@ body {
   gap: 0.5rem;
   border: none;
   cursor: pointer;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.25rem;
+  }
+
+  .input {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .login-text {
+    font-size: 0.75rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .dashboard-image {
+    width: 90%;
+  }
+
+  .info-box {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
 }
