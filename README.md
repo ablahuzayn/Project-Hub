@@ -11,14 +11,19 @@ https://ablahuzayn.github.io/Project-Hub/
 [Many brilliant student projects and startup ideas created during hackathons or ideathons never see the light of day. They’re often forgotten or left incomplete due to lack of visibility, mentorship, and follow-up support.]
 
 ### The Solution
-[Project Hub bridges the gap between student innovation and real-world implementation by offering:
-A centralized platform for students to submit their project ideas.
-Monthly curation of top 3 innovative projects for recognition and support.
-Startup mentorship and guidance from organizations like IEDC, GDG mentors, and KSUM.
-A live project gallery where students can explore others’ ideas, learn, and collaborate.
-A seamless and secure authentication system for safe access and management.
-By providing both visibility and support, Project Hub aims to transform creative student projects into impactful startups or tech solutions.
-]
+[Project Hub helps students turn their ideas into real products by:
+
+Letting them submit and showcase projects
+
+Featuring top 3 projects every month
+
+Offering mentorship from IEDC, GDG, and KSUM
+
+Providing a project gallery to explore and collaborate
+
+Ensuring secure login and access
+
+It’s a launchpad to turn student innovation into real-world impact.]
 
 ## Technical Details
 ### Technologies/Components Used
