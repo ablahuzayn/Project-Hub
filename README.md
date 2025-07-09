@@ -5,7 +5,7 @@
 https://ablahuzayn.github.io/Project-Hub/
 
 ### Project Description
-[Project Hub is a user-friendly web platform built for students to showcase their hackathon or ideathon projects. Instead of letting great ideas die in Google Drive folders, Project Hub gives visibility to student innovations and connects them with the right mentors and startup support. Each month, the top 3 projects are featured and given an opportunity to become real, impactful products with the help of IEDC, GDG mentors, and Kerala Startup Mission.]
+[Project Hub lets students showcase their best projects, get featured monthly, and receive mentorship to turn ideas into real products.]
 
 ### The Problem statement
 [Many brilliant student projects and startup ideas created during hackathons or ideathons never see the light of day. They’re often forgotten or left incomplete due to lack of visibility, mentorship, and follow-up support.]
