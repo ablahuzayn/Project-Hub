@@ -37,9 +37,9 @@ open live server
 ```
 
 ### Project Documentation
-# Screenshots
+## Screenshots
 [https://drive.google.com/drive/folders/1Kt5g4QGBKsZmnBZGQwINkQSnP1XYgo_3]
 
 ### Project Demo
-# Video
+## Video
 [https://drive.google.com/file/d/1zkyWPPb_qUcAdm3EfBMayQWZ6ejbQ3MF/view?usp=drivesdk]
