@@ -12,17 +12,11 @@ https://ablahuzayn.github.io/Project-Hub/
 
 ### The Solution
 [Project Hub helps students turn their ideas into real products by:
-
 Letting them submit and showcase projects
-
 Featuring top 3 projects every month
-
 Offering mentorship from IEDC, GDG, and KSUM
-
 Providing a project gallery to explore and collaborate
-
 Ensuring secure login and access
-
 It’s a launchpad to turn student innovation into real-world impact.]
 
 ## Technical Details
